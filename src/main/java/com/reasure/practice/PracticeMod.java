@@ -1,6 +1,5 @@
 package com.reasure.practice;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,6 +11,6 @@ public class PracticeMod {
     public static final Logger LOGGER = LogManager.getLogger();
 
     public PracticeMod() {
-        MinecraftForge.EVENT_BUS.register(this);
+
     }
 }
