@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "practice:silver_ore",
-    "practice:deepslate_silver_ore",
-    "practice:silver_block"
+    "#forge:ores/silver",
+    "#forge:storage_blocks/raw_silver",
+    "#forge:storage_blocks/silver"
   ]
 }

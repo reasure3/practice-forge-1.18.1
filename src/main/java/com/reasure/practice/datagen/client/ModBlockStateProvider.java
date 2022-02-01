@@ -15,6 +15,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(ModBlocks.SILVER_ORE.get());
         simpleBlock(ModBlocks.DEEPSLATE_SILVER_ORE.get());
+        simpleBlock(ModBlocks.RAW_SILVER_BLOCK.get());
         simpleBlock(ModBlocks.SILVER_BLOCK.get());
     }
 }

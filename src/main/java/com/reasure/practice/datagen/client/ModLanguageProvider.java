@@ -26,6 +26,7 @@ public class ModLanguageProvider extends BaseLanguageProvider {
 
         add(ModBlocks.SILVER_ORE.get(), "Silver Ore");
         add(ModBlocks.DEEPSLATE_SILVER_ORE.get(), "Deepslate Silver Ore");
+        add(ModBlocks.RAW_SILVER_BLOCK.get(), "Raw Silver Block");
         add(ModBlocks.SILVER_BLOCK.get(), "Silver Block");
     }
 
@@ -38,6 +39,7 @@ public class ModLanguageProvider extends BaseLanguageProvider {
 
         add(ModBlocks.SILVER_ORE.get(), "은 광석");
         add(ModBlocks.DEEPSLATE_SILVER_ORE.get(), "심층암 은 광석");
+        add(ModBlocks.RAW_SILVER_BLOCK.get(), "은 원석 블록");
         add(ModBlocks.SILVER_BLOCK.get(), "은 블록");
     }
 }
