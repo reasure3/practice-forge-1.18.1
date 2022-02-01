@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "practice:block/deepslate_silver_ore"
+  }
+}
