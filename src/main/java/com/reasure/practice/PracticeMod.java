@@ -1,9 +1,11 @@
 package com.reasure.practice;
 
+import com.reasure.practice.block.ModBlocks;
+import com.reasure.practice.item.ModItems;
 import com.reasure.practice.setup.ClientSetup;
 import com.reasure.practice.setup.ModSetup;
-import com.reasure.practice.setup.Registration;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -15,15 +17,20 @@ import org.apache.logging.log4j.Logger;
 public class PracticeMod {
     public static final String MOD_ID = "practice";
     public static final String MOD_NAME = "Practice Mod";
-    public static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
 
     public PracticeMod() {
+        IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
+
         // Register the deferred registry
-        Registration.init();
+        ModItems.register(modbus);
+        ModBlocks.register(modbus);
 
         // Register the setup method for mod loading
-        IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
         modbus.addListener(ModSetup::init);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
+
+        // Register ourselves for server and other game events we are interested in
+        MinecraftForge.EVENT_BUS.register(this);
     }
 }
