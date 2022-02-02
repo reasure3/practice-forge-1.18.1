@@ -40,7 +40,6 @@ import java.nio.file.Path;
 import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
-import java.util.function.Supplier;
 
 public abstract class BaseLanguageProvider implements DataProvider {
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().disableHtmlEscaping().create();
@@ -81,32 +80,16 @@ public abstract class BaseLanguageProvider implements DataProvider {
         cache.putNew(target, hash);
     }
 
-    public void addBlock(Supplier<? extends Block> key, String name) {
-        add(key.get(), name);
-    }
-
     public void add(Block key, String name) {
         add(key.getDescriptionId(), name);
-    }
-
-    public void addItem(Supplier<? extends Item> key, String name) {
-        add(key.get(), name);
     }
 
     public void add(Item key, String name) {
         add(key.getDescriptionId(), name);
     }
 
-    public void addItemStack(Supplier<ItemStack> key, String name) {
-        add(key.get(), name);
-    }
-
     public void add(ItemStack key, String name) {
         add(key.getDescriptionId(), name);
-    }
-
-    public void addEnchantment(Supplier<? extends Enchantment> key, String name) {
-        add(key.get(), name);
     }
 
     public void add(Enchantment key, String name) {
@@ -114,25 +97,13 @@ public abstract class BaseLanguageProvider implements DataProvider {
     }
 
     /*
-    public void addBiome(Supplier<? extends Biome> key, String name) {
-        add(key.get(), name);
-    }
-
     public void add(Biome key, String name) {
         add(key.getTranslationKey(), name);
     }
      */
 
-    public void addEffect(Supplier<? extends MobEffect> key, String name) {
-        add(key.get(), name);
-    }
-
     public void add(MobEffect key, String name) {
         add(key.getDescriptionId(), name);
-    }
-
-    public void addEntityType(Supplier<? extends EntityType<?>> key, String name) {
-        add(key.get(), name);
     }
 
     public void add(EntityType<?> key, String name) {

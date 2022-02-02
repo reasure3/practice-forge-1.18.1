@@ -14,15 +14,14 @@ import net.minecraft.world.level.storage.loot.LootTables;
 import net.minecraft.world.level.storage.loot.ValidationContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 public class ModLootTableProvider extends LootTableProvider {
     public ModLootTableProvider(DataGenerator generator) {
@@ -40,6 +39,8 @@ public class ModLootTableProvider extends LootTableProvider {
     }
 
     public static class ModLootTables extends BlockLoot {
+        private static final List<Block> knownBlocks = new ArrayList<>();
+
         @Override
         protected void addTables() {
             dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
@@ -51,7 +52,13 @@ public class ModLootTableProvider extends LootTableProvider {
 
         @Override @NotNull
         protected Iterable<Block> getKnownBlocks() {
-            return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).collect(Collectors.toList());
+            return knownBlocks;
+        }
+
+        @Override
+        protected void add(@NotNull Block block, LootTable.@NotNull Builder builder) {
+            super.add(block, builder);
+            knownBlocks.add(block);
         }
     }
 }
