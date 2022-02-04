@@ -61,7 +61,8 @@ public abstract class BaseLanguageProvider implements DataProvider {
             save(cache, data, this.gen.getOutputFolder().resolve("assets/" + PracticeMod.MOD_ID + "/lang/" + locale + ".json"));
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public String getName() {
         return "Languages: " + locale + ": " + PracticeMod.MOD_ID;
     }

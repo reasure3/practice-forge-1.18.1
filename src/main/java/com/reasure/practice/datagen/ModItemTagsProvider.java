@@ -1,7 +1,7 @@
 package com.reasure.practice.datagen;
 
 import com.reasure.practice.PracticeMod;
-import com.reasure.practice.item.ModItems;
+import com.reasure.practice.setup.ModItems;
 import com.reasure.practice.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -41,7 +41,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.SILVER_NUGGET.get());
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public String getName() {
         return "Item Tags: " + modId;
     }

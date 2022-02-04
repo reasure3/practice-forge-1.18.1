@@ -1,5 +1,6 @@
-package com.reasure.practice.item;
+package com.reasure.practice.setup;
 
+import com.reasure.practice.item.ModItemGroup;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

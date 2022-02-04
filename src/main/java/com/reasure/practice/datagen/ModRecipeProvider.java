@@ -1,8 +1,8 @@
 package com.reasure.practice.datagen;
 
 import com.reasure.practice.PracticeMod;
-import com.reasure.practice.block.ModBlocks;
-import com.reasure.practice.item.ModItems;
+import com.reasure.practice.setup.ModBlocks;
+import com.reasure.practice.setup.ModItems;
 import com.reasure.practice.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
@@ -22,7 +22,7 @@ public class ModRecipeProvider extends RecipeProvider {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModTags.Items.RAW_MATERIALS_SILVER), ModItems.SILVER_INGOT.get(), 0.9f, 200)
                 .group("silver_ingot")
                 .unlockedBy("has_raw_silver", has(ModTags.Items.RAW_MATERIALS_SILVER))
-                .save(consumer,modLoc("silver_ingot_from_smelting_raw"));
+                .save(consumer, modLoc("silver_ingot_from_smelting_raw"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModTags.Items.RAW_MATERIALS_SILVER), ModItems.SILVER_INGOT.get(), 0.9f, 100)
                 .group("silver_ingot")
                 .unlockedBy("has_raw_silver", has(ModTags.Items.RAW_MATERIALS_SILVER))

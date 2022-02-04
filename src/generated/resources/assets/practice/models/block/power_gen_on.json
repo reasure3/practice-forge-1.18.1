@@ -1,0 +1,39 @@
+{
+  "textures": {
+    "single": "practice:block/power_gen_on"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        3,
+        3
+      ],
+      "to": [
+        13,
+        13,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#single"
+        },
+        "up": {
+          "texture": "#single"
+        },
+        "north": {
+          "texture": "#single"
+        },
+        "south": {
+          "texture": "#single"
+        },
+        "west": {
+          "texture": "#single"
+        },
+        "east": {
+          "texture": "#single"
+        }
+      }
+    }
+  ]
+}

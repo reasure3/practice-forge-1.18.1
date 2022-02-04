@@ -1,7 +1,7 @@
 package com.reasure.practice.datagen;
 
 import com.reasure.practice.PracticeMod;
-import com.reasure.practice.block.ModBlocks;
+import com.reasure.practice.setup.ModBlocks;
 import com.reasure.practice.util.ModTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -21,11 +21,13 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .addTag(ModTags.Blocks.ORES_SILVER)
                 .addTag(ModTags.Blocks.STORAGE_BLOCKS_RAW_SILVER)
-                .addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER);
+                .addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER)
+                .add(ModBlocks.POWER_GEN_BLOCK.get());
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .addTag(ModTags.Blocks.ORES_SILVER)
                 .addTag(ModTags.Blocks.STORAGE_BLOCKS_RAW_SILVER)
-                .addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER);
+                .addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER)
+                .add(ModBlocks.POWER_GEN_BLOCK.get());
 
         tag(Tags.Blocks.ORES)
                 .addTag(ModTags.Blocks.ORES_SILVER);
@@ -47,7 +49,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.SILVER_BLOCK.get());
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public String getName() {
         return "Block Tags: " + modId;
     }

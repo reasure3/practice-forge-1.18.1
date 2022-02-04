@@ -1,0 +1,25 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "practice:block/power_gen_main"
+      }
+    },
+    {
+      "when": {
+        "powered": "false"
+      },
+      "apply": {
+        "model": "practice:block/power_gen_off"
+      }
+    },
+    {
+      "when": {
+        "powered": "true"
+      },
+      "apply": {
+        "model": "practice:block/power_gen_on"
+      }
+    }
+  ]
+}

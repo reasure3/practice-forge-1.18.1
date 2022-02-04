@@ -1,9 +1,6 @@
 package com.reasure.practice;
 
-import com.reasure.practice.block.ModBlocks;
-import com.reasure.practice.item.ModItems;
-import com.reasure.practice.setup.ClientSetup;
-import com.reasure.practice.setup.ModSetup;
+import com.reasure.practice.setup.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +22,8 @@ public class PracticeMod {
         // Register the deferred registry
         ModItems.register(modbus);
         ModBlocks.register(modbus);
+        ModBlockEntityTypes.register(modbus);
+        ModMenuTypes.register(modbus);
 
         // Register the setup method for mod loading
         modbus.addListener(ModSetup::init);
