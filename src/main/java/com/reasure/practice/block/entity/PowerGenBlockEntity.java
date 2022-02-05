@@ -187,11 +187,9 @@ public class PowerGenBlockEntity extends BlockEntity {
     }
 
     public void dropContents(ServerLevel level, BlockPos pos) {
-        this.handler.ifPresent(h -> {
-            for (int i = 0; i < h.getSlots(); i++) {
-                Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), h.getStackInSlot(i));
-                setChanged();
-            }
-        });
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), itemHandler.getStackInSlot(i).copy());
+            itemHandler.setStackInSlot(i, ItemStack.EMPTY);
+        }
     }
 }
