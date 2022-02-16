@@ -3,6 +3,7 @@ package com.reasure.practice.datagen.client;
 import com.reasure.practice.block.PowerGenBlock;
 import com.reasure.practice.item.ModItemGroup;
 import com.reasure.practice.setup.ModBlocks;
+import com.reasure.practice.setup.ModEntityTypes;
 import com.reasure.practice.setup.ModItems;
 import net.minecraft.data.DataGenerator;
 
@@ -32,7 +33,11 @@ public class ModLanguageProvider extends BaseLanguageProvider {
 
         add(PowerGenBlock.MESSAGE_POWER_GEN, "Power generator generating %s per tick!");
         add(PowerGenBlock.SCREEN_PRACTICE_POWER_GEN, "Power Generator");
-        add(ModBlocks.POWER_GEN_BLOCK.get(), "Power Generator");
+        add(ModBlocks.POWER_GEN.get(), "Power Generator");
+        add(ModBlocks.ORE_GENERATOR.get(), "Ore Generator");
+
+        add(ModEntityTypes.THIEF.get(), "Thief");
+        add(ModItems.THIEF_EGG.get(), "Thief Spawn Egg");
     }
 
     private void addKoreanTranslations() {
@@ -49,6 +54,10 @@ public class ModLanguageProvider extends BaseLanguageProvider {
 
         add(PowerGenBlock.MESSAGE_POWER_GEN, "틱 당 %s를 생산하는 발전기!");
         add(PowerGenBlock.SCREEN_PRACTICE_POWER_GEN, "발전기");
-        add(ModBlocks.POWER_GEN_BLOCK.get(), "발전기");
+        add(ModBlocks.POWER_GEN.get(), "발전기");
+        add(ModBlocks.ORE_GENERATOR.get(), "광석 생성기");
+
+        add(ModEntityTypes.THIEF.get(), "도둑");
+        add(ModItems.THIEF_EGG.get(), "도둑 생성 알");
     }
 }

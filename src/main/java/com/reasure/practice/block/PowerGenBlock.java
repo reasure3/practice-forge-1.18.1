@@ -2,7 +2,7 @@ package com.reasure.practice.block;
 
 import com.reasure.practice.PracticeMod;
 import com.reasure.practice.block.entity.PowerGenBlockEntity;
-import com.reasure.practice.world.inventory.PowerGenMenu;
+import com.reasure.practice.block.inventory.PowerGenMenu;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

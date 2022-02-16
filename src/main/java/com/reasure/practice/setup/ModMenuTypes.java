@@ -1,7 +1,7 @@
 package com.reasure.practice.setup;
 
 import com.reasure.practice.PracticeMod;
-import com.reasure.practice.world.inventory.PowerGenMenu;
+import com.reasure.practice.block.inventory.PowerGenMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.eventbus.api.IEventBus;

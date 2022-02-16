@@ -4,6 +4,7 @@
     "#forge:ores/silver",
     "#forge:storage_blocks/raw_silver",
     "#forge:storage_blocks/silver",
-    "practice:power_gen"
+    "practice:power_gen",
+    "practice:ore_generator"
   ]
 }

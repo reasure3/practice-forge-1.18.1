@@ -22,12 +22,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.ORES_SILVER)
                 .addTag(ModTags.Blocks.STORAGE_BLOCKS_RAW_SILVER)
                 .addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER)
-                .add(ModBlocks.POWER_GEN_BLOCK.get());
+                .add(ModBlocks.POWER_GEN.get())
+                .add(ModBlocks.ORE_GENERATOR.get());
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .addTag(ModTags.Blocks.ORES_SILVER)
                 .addTag(ModTags.Blocks.STORAGE_BLOCKS_RAW_SILVER)
                 .addTag(ModTags.Blocks.STORAGE_BLOCKS_SILVER)
-                .add(ModBlocks.POWER_GEN_BLOCK.get());
+                .add(ModBlocks.POWER_GEN.get())
+                .add(ModBlocks.ORE_GENERATOR.get());
 
         tag(Tags.Blocks.ORES)
                 .addTag(ModTags.Blocks.ORES_SILVER);

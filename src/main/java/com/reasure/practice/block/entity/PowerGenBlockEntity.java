@@ -131,7 +131,6 @@ public class PowerGenBlockEntity extends BlockEntity {
 
     @Override
     protected void saveAdditional(CompoundTag tag) {
-        tag.put("Inventory", itemHandler.serializeNBT());
         tag.put("Energy", energyStorage.serializeNBT());
         CompoundTag infoTag = new CompoundTag();
         infoTag.putInt("Counter", counter);

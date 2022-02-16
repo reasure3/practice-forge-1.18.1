@@ -1,12 +1,15 @@
 {
   "block.practice.deepslate_silver_ore": "Deepslate Silver Ore",
+  "block.practice.ore_generator": "Ore Generator",
   "block.practice.power_gen": "Power Generator",
   "block.practice.raw_silver_block": "Raw Silver Block",
   "block.practice.silver_block": "Silver Block",
   "block.practice.silver_ore": "Silver Ore",
+  "entity.practice.thief": "Thief",
   "item.practice.raw_silver": "Raw Silver",
   "item.practice.silver_ingot": "Silver Ingot",
   "item.practice.silver_nugget": "Silver Nugget",
+  "item.practice.thief": "Thief Spawn Egg",
   "itemGroup.practice": "Practice",
   "message.power_gen": "Power generator generating %s per tick!",
   "screen.practice.power_gen": "Power Generator"

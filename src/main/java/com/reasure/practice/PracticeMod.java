@@ -24,6 +24,7 @@ public class PracticeMod {
         ModBlocks.register(modbus);
         ModBlockEntityTypes.register(modbus);
         ModMenuTypes.register(modbus);
+        ModEntityTypes.register(modbus);
 
         // Register the setup method for mod loading
         modbus.addListener(ModSetup::init);

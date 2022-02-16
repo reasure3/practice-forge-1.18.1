@@ -61,7 +61,8 @@ public class ModLootTableProvider extends LootTableProvider {
             add(ModBlocks.SILVER_ORE.get(), ore -> createOreDrop(ore, ModItems.RAW_SILVER.get()));
             add(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ore -> createOreDrop(ore, ModItems.RAW_SILVER.get()));
 
-            add(ModBlocks.POWER_GEN_BLOCK.get(), gen -> createStandardTable(gen, ModBlockEntityTypes.POWER_GEN_BLOCK_ENTITY.get(), "Energy", "Info"));
+            add(ModBlocks.POWER_GEN.get(), gen -> createStandardTable(gen, ModBlockEntityTypes.POWER_GEN_BLOCK_ENTITY.get(), "Energy", "Info"));
+            add(ModBlocks.ORE_GENERATOR.get(), gen -> createStandardTable(gen, ModBlockEntityTypes.ORE_GENERATOR_BLOCK_ENTITY.get(), "Energy", "Info", "Inventory"));
         }
 
         @Override

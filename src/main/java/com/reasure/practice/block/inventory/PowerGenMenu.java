@@ -1,7 +1,6 @@
-package com.reasure.practice.world.inventory;
+package com.reasure.practice.block.inventory;
 
 import com.reasure.practice.capability.CustomEnergyStorage;
-import com.reasure.practice.setup.ModBlockEntityTypes;
 import com.reasure.practice.setup.ModBlocks;
 import com.reasure.practice.setup.ModMenuTypes;
 import net.minecraft.core.BlockPos;
@@ -85,7 +84,7 @@ public class PowerGenMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(@NotNull Player player) {
         //noinspection ConstantConditions
-        return stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), player, ModBlocks.POWER_GEN_BLOCK.get());
+        return stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), player, ModBlocks.POWER_GEN.get());
     }
 
     @NotNull

@@ -1,9 +1,9 @@
-package com.reasure.practice.client.screens;
+package com.reasure.practice.block.client.screens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.reasure.practice.PracticeMod;
-import com.reasure.practice.world.inventory.PowerGenMenu;
+import com.reasure.practice.block.inventory.PowerGenMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;

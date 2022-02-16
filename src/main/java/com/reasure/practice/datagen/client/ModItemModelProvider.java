@@ -20,12 +20,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         block(ModBlocks.RAW_SILVER_BLOCK.getId().getPath());
         block(ModBlocks.SILVER_BLOCK.getId().getPath());
 
-        block(ModBlocks.POWER_GEN_BLOCK.getId().getPath(), "power_gen_main");
+        block(ModBlocks.POWER_GEN.getId().getPath(), "power_gen_main");
+        block(ModBlocks.ORE_GENERATOR.getId().getPath());
 
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
         build(ModItems.RAW_SILVER.getId().getPath(), itemGenerated);
         build(ModItems.SILVER_INGOT.getId().getPath(), itemGenerated);
         build(ModItems.SILVER_NUGGET.getId().getPath(), itemGenerated);
+
+        withExistingParent(ModItems.THIEF_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private void block(String itemPath) {

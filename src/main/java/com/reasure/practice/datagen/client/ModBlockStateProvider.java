@@ -7,7 +7,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.CustomLoaderBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
+
+import static com.reasure.practice.block.client.model.OreGeneratorModelLoader.ORE_GENERATOR_LOADER;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(DataGenerator gen, ExistingFileHelper helper) {
@@ -52,7 +55,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         frame.texture("window", modLoc("block/power_gen_window"));
         frame.texture("particle", modLoc("block/power_gen_off"));
 
-        createPowerGenModel(ModBlocks.POWER_GEN_BLOCK.get(), frame);
+        createPowerGenModel(ModBlocks.POWER_GEN.get(), frame);
+        registerOreGenerator();
     }
 
     private void floatingCube(BlockModelBuilder builder, float fx, float fy, float fz, float tx, float ty, float tz) {
@@ -73,5 +77,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getMultipartBuilder(block).part().modelFile(frame).addModel().end()
                 .part().modelFile(singleOff).addModel().condition(BlockStateProperties.POWERED, false).end()
                 .part().modelFile(singleOn).addModel().condition(BlockStateProperties.POWERED, true).end();
+    }
+
+    private void registerOreGenerator() {
+        // Using CustomLoaderBuilder we can define a json file for our model that will use our baked model
+        @SuppressWarnings("ConstantConditions")
+        BlockModelBuilder generatorModel = models().getBuilder(ModBlocks.ORE_GENERATOR.get().getRegistryName().getPath())
+                .parent(models().getExistingFile(mcLoc("cube")))
+                .customLoader((blockModelBuilder, helper) -> new CustomLoaderBuilder<BlockModelBuilder>(ORE_GENERATOR_LOADER, blockModelBuilder, helper) {})
+                .end();
+        directionalBlock(ModBlocks.ORE_GENERATOR.get(), generatorModel);
     }
 }

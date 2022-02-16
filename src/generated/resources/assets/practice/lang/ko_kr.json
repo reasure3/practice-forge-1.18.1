@@ -1,12 +1,15 @@
 {
   "block.practice.deepslate_silver_ore": "심층암 은 광석",
+  "block.practice.ore_generator": "광석 생성기",
   "block.practice.power_gen": "발전기",
   "block.practice.raw_silver_block": "은 원석 블록",
   "block.practice.silver_block": "은 블록",
   "block.practice.silver_ore": "은 광석",
+  "entity.practice.thief": "도둑",
   "item.practice.raw_silver": "은 원석",
   "item.practice.silver_ingot": "은 주괴",
   "item.practice.silver_nugget": "은 조각",
+  "item.practice.thief": "도둑 생성 알",
   "itemGroup.practice": "연습용 모드",
   "message.power_gen": "틱 당 %s를 생산하는 발전기!",
   "screen.practice.power_gen": "발전기"

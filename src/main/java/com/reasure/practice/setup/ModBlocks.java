@@ -1,5 +1,6 @@
 package com.reasure.practice.setup;
 
+import com.reasure.practice.block.OreGeneratorBlock;
 import com.reasure.practice.block.PowerGenBlock;
 import com.reasure.practice.item.ModItemGroup;
 import net.minecraft.world.item.BlockItem;
@@ -33,8 +34,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> SILVER_BLOCK = register("silver_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_GRAY).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
-    public static final RegistryObject<PowerGenBlock> POWER_GEN_BLOCK = register("power_gen",
+    public static final RegistryObject<PowerGenBlock> POWER_GEN = register("power_gen",
             () -> new PowerGenBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(2.0F).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<OreGeneratorBlock> ORE_GENERATOR = register("ore_generator",
+            () -> new OreGeneratorBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(2.0F).requiresCorrectToolForDrops()));
 
     public static void register(IEventBus modBus) {
         BLOCKS.register(modBus);

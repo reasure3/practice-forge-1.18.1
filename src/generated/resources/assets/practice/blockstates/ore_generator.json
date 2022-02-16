@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "practice:block/ore_generator",
+      "x": 180
+    },
+    "facing=up": {
+      "model": "practice:block/ore_generator"
+    },
+    "facing=north": {
+      "model": "practice:block/ore_generator",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "practice:block/ore_generator",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "practice:block/ore_generator",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "practice:block/ore_generator",
+      "x": 90,
+      "y": 90
+    }
+  }
+}
